@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyers Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Buyers Questionnaire</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#personal-info">Personal Information</a></li>
+                <li><a href="#family-lifestyle">Family Demographics and Lifestyle</a></li>
+                <li><a href="#house-specs">House Specifications</a></li>
+                <li><a href="#building-preferences">Building Preferences</a></li>
+                <li><a href="#finance-timeline">Finance and Timeline</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form id="buyers-form">
+                <section id="personal-info">
+                    <h2>Personal Information</h2>
+                    <div class="question-item">
+                    <label for="name">Name</label>
+                    <input type="text" class="text-box" id="name" name="name">
+                    <label for="number">Number</label>
+                    <input type="text" class="text-box" id="number" name="number">
+                    <label for="profession">Profession</label>
+                    <input type="text" class="text-box" id="profession" name="profession">
+                    <label for="current-residence">Current Residence</label>
+                    <input type="text" class="text-box" id="current-residence" name="current-residence">
+                    <label for="reference">Reference</label>
+                    <input type="text" class="text-box" id="reference" name="reference">
+                </div>
+                </section>
+
+                <section id="family-lifestyle">
+                    <h2>Family Demographics and Lifestyle</h2>
+
+                    <ol class="question-list">
+                    <li class="question-item">    
+                        <label for="buy-house-reason">Why do you want to buy a house?</label>
+                        <div class="checkbox">
+                            <label for="lifestyle-upgrade">Lifestyle upgrade</label>
+                            <input type="radio" id="lifestyle-upgrade" name="buy-house-reason" value="lifestyle-upgrade">
+                        </div>
+                        <div class="checkbox">
+                            <label for="investment">Investment</label>
+                            <input type="radio" id="investment" name="buy-house-reason" value="investment">
+                            
+                        </div>
+                        <div class="checkbox">
+                            <label for="first-home">First home</label>
+                            <input type="radio" id="first-home" name="buy-house-reason" value="first-home">
+                            
+                        </div>
+                        <div class="checkbox">
+                            <label for="second-home">Second home</label>
+                            <input type="radio" id="second-home" name="buy-house-reason" value="second-home">
+                            
+                        </div>
+                        <div class="checkbox">
+                            <label for="relocation">Relocation</label>
+                            <input type="radio" id="relocation" name="buy-house-reason" value="relocation">
+                        
+                        </div>
+                    </li>
+
+                    <li class="question-item">
+                        <label for="members-staying">How many members are going to stay in the house?</label>
+                        <div class="input-group">
+                            <label for="adults">Adults</label>
+                            <input type="number" class="text-box-num" id="adults" name="adults" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label for="children">Children</label>
+                            <input type="number" class="text-box-num" id="children" name="children" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label for="senior-citizens">Senior Citizens</label>
+                            <input type="number" class="text-box-num" id="senior-citizens" name="senior-citizens" min="0">
+                        </div>
+                    </li>
+
+                    <li class="question-item">
+                        <label for="pet-friendly">Do you have pets? Are you looking to stay in a pet-friendly community?</label>
+                        <div class="checkbox">
+                            <label for="pet-yes">Yes</label>
+                            <input type="radio" id="pet-yes" name="pet-friendly" value="yes">
+                        </div>
+                        <div class="checkbox">
+                            <label for="pet-no">No</label>
+                            <input type="radio" id="pet-no" name="pet-friendly" value="no">
+                        </div>
+                    </li>
+
+                    <li class="question-item">
+                        <label for="current-area">What is the carpet area of your current residence? (in sq. ft.)</label>
+                        <input type="number" class="text-box-num" id="current-area" name="current-area" min="0">
+                    </li>
+                    <li class="question-item">
+                        <label for="religious-place">Do you prefer derasar / mandir / gurudwara near your house?</label>
+                        <div class="checkbox">
+                            <label for="religious-yes">Yes</label>
+                            <input type="radio" id="religious-yes" name="religious-place" value="yes">
+                        </div>
+                        <div class="checkbox">
+                            <label for="religious-no">No</label>
+                            <input type="radio" id="religious-no" name="religious-place" value="no">
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <label for="preferred-gentry">What is your preferred gentry &amp; community?</label>
+                        <input type="text" class="text-box-num" style="display: inline;" id="preferred-gentry" name="preferred-gentry"> &amp; <input type="text" class="text-box-num" style="display: inline;" id="preferred-community" name="preferred-community">
+                    </li>
+                    <li class="question-item">
+                        <label for="club-member">Are you a member at any club or resorts / weekend villa or group of hotels?</label>
+                        <div class="checkbox">
+                            <label for="club-yes">Yes</label>
+                            <input type="radio" id="club-yes" name="club-member" value="yes">
+                        </div>
+                        <div class="checkbox">
+                            <label for="club-no">No</label>
+                            <input type="radio" id="club-no" name="club-member" value="no">
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <label for="gatherings">How often do you host gatherings at your place?</label>
+                        <div class="checkbox">
+                            <label for="gatherings-rarely">Rarely</label>
+                            <input type="radio" id="gatherings-rarely" name="gatherings" value="rarely">
+                        </div>
+                        <div class="checkbox">
+                            <label for="gatherings-sometimes">Sometimes</label>
+                            <input type="radio" id="gatherings-sometimes" name="gatherings" value="sometimes">
+                        </div>
+                        <div class="checkbox">
+                            <label for="gatherings-often">Often</label>
+                            <input type="radio" id="gatherings-often" name="gatherings" value="often">
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <label for="international-travel">How often do you travel internationally?</label>
+                        <div class="checkbox">
+                            <label for="travel-never">Have never traveled</label>
+                            <input type="radio" id="travel-never" name="international-travel" value="never">
+                        </div>
+                        <div class="checkbox">
+                            <label for="travel-2years">Once in 2 years</label>
+                            <input type="radio" id="travel-2years" name="international-travel" value="2years">
+                        </div>
+                        <div class="checkbox">
+                            <label for="travel-yearly">Every year</label>
+                            <input type="radio" id="travel-yearly" name="international-travel" value="yearly">
+                        </div>
+                        <div class="checkbox">
+                            <label for="travel-multiple">More than once in a year</label>
+                            <input type="radio" id="travel-multiple" name="international-travel" value="multiple">
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <div class="question-content">
+                            <label for="workplace-area">In which area is your workplace?</label>
+                            <div class="dropdown">
+                            <select id="workplace-area" name="workplace-area"></select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="question-item">
+                        <div class="question-content">
+                            <label for="school-area">In which area do your children go to school?</label>
+                            <div class="dropdown">
+                            <select id="school-area" name="school-area"></select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="question-item">
+                        <div class="question-content">
+                            <label for="social-area">In which area of Ahmedabad are you socially active?</label>
+                            <div class="dropdown">
+                            <select id="social-area" name="social-area"></select>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="question-item">
+                        <div class="question-content">
+                            <label for="preferred-locations">What are your top 3 preferred locations?</label>
+                            <div class="dropdown">
+                            <select id="preferred-locations-1" name="preferred-locations"></select>
+                            </div>
+                            <div class="dropdown">
+                            <select id="preferred-locations-2" name="preferred-locations"></select>
+                            </div>
+                            <div class="dropdown">
+                            <select id="preferred-locations-3" name="preferred-locations"></select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="question-item">
+                        <label for="decision-type">Do you want your home buying decision to be budget driven or choice driven?</label>
+                        <div class="checkbox">
+                            <label for="budget-driven">Budget driven</label>
+                            <input type="radio" id="budget-driven" name="decision-type" value="budget">
+                        </div>
+                        <div class="checkbox">
+                            <label for="choice-driven">Choice driven</label>
+                            <input type="radio" id="choice-driven" name="decision-type" value="choice">
+                        </div>
+                    </li>
+                    </ol>
+                </section>
+
+
+                <section id="house-specs">
+                    <h2>House Specifications</h2>
+                    <!-- Add house specification fields here -->
+                </section>
+                <section id="building-preferences">
+                    <h2>Building Preferences</h2>
+                    <!-- Add building preference fields here -->
+                </section>
+                <section id="finance-timeline">
+                    <h2>Finance and Timeline</h2>
+                    <!-- Add finance and timeline fields here -->
+                </section>
+
+
+                <div class="form-actions">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

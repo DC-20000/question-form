@@ -220,17 +220,443 @@
 
                 <section id="house-specs">
                     <h2>House Specifications</h2>
-                    <!-- Add house specification fields here -->
-                </section>
-                <section id="building-preferences">
-                    <h2>Building Preferences</h2>
-                    <!-- Add building preference fields here -->
-                </section>
-                <section id="finance-timeline">
-                    <h2>Finance and Timeline</h2>
-                    <!-- Add finance and timeline fields here -->
+                    <ol class="question-list">
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="house-type">Are you looking for a bungalow / apartment?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="bungalow">Bungalow</label>
+                                        <input type="radio" id="bungalow" name="house-type" value="bungalow">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="apartment">Apartment</label>
+                                        <input type="radio" id="apartment" name="house-type" value="apartment">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="bedrooms">How many bedrooms do you need?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="3bhk">3 BHK</label>
+                                        <input type="radio" id="3bhk" name="bedrooms" value="3bhk">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="4bhk">4 BHK</label>
+                                        <input type="radio" id="4bhk" name="bedrooms" value="4bhk">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="5bhk">5 BHK</label>
+                                        <input type="radio" id="5bhk" name="bedrooms" value="5bhk">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="6bhk">6 BHK</label>
+                                        <input type="radio" id="6bhk" name="bedrooms" value="6bhk">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="attached-washrooms">How many attached washrooms should your house have?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="3-washrooms">3</label>
+                                        <input type="radio" id="3-washrooms" name="attached-washrooms" value="3">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="4-washrooms">4</label>
+                                        <input type="radio" id="4-washrooms" name="attached-washrooms" value="4">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="5-washrooms">5</label>
+                                        <input type="radio" id="5-washrooms" name="attached-washrooms" value="5">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="6-washrooms">6</label>
+                                        <input type="radio" id="6-washrooms" name="attached-washrooms" value="6">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="servant-room">Are you looking for a house with a servant room?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="servant-room-yes">Yes</label>
+                                        <input type="radio" id="servant-room-yes" name="servant-room" value="yes">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="servant-room-no">No</label>
+                                        <input type="radio" id="servant-room-no" name="servant-room" value="no">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="puja-room">Do you want a separate puja room?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="puja-room-yes">Yes</label>
+                                        <input type="radio" id="puja-room-yes" name="puja-room" value="yes">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="puja-room-no">No</label>
+                                        <input type="radio" id="puja-room-no" name="puja-room" value="no">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="puja-room-maybe">Maybe</label>
+                                        <input type="radio" id="puja-room-maybe" name="puja-room" value="maybe">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="carpet-area-min">What should be the minimum Carpet area of the new property?</label>
+                                <input type="number" id="carpet-area-min" name="carpet-area-min" min="0" class="text-box-num"> sq. ft. to
+                                <input type="number" id="carpet-area-max" name="carpet-area-max" min="0" class="text-box-num"> sq. ft.
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="vastu-preference">Any vastu preferences?</label>
+                                <input type="text" id="vastu-preference" name="vastu-preference" class="text-box">
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="living-dining">Do you want the living and dining room to be separate?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="common-area">Big common area will do</label>
+                                        <input type="radio" id="common-area" name="living-dining" value="common-area">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="separate-rooms">Need separate</label>
+                                        <input type="radio" id="separate-rooms" name="living-dining" value="separate-rooms">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="manage-interior">Can manage in interiors</label>
+                                        <input type="radio" id="manage-interior" name="living-dining" value="manage-interior">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="flats-per-floor">How many flats do you prefer on one floor?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="1-flat">1</label>
+                                        <input type="radio" id="1-flat" name="flats-per-floor" value="1">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="2-flats">2</label>
+                                        <input type="radio" id="2-flats" name="flats-per-floor" value="2">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="3-flats">3</label>
+                                        <input type="radio" id="3-flats" name="flats-per-floor" value="3">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="4-flats">4</label>
+                                        <input type="radio" id="4-flats" name="flats-per-floor" value="4">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="5-flats">5</label>
+                                        <input type="radio" id="5-flats" name="flats-per-floor" value="5">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="no-preference">No preference</label>
+                                        <input type="radio" id="no-preference" name="flats-per-floor" value="no-preference">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="floor-preference">What is your floor preference?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="floor-1-5">1 to 5</label>
+                                        <input type="radio" id="floor-1-5" name="floor-preference" value="1-5">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="floor-6-12">6 to 12</label>
+                                        <input type="radio" id="floor-6-12" name="floor-preference" value="6-12">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="floor-13-20">13 to 20</label>
+                                        <input type="radio" id="floor-13-20" name="floor-preference" value="13-20">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="floor-above-21">above 21</label>
+                                        <input type="radio" id="floor-above-21" name="floor-preference" value="above-21">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="private-elevator">Do you need a private elevator outside your residence?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="elevator-not-matter">Doesn't matter</label>
+                                        <input type="radio" id="elevator-not-matter" name="private-elevator" value="not-matter">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="elevator-must">Must</label>
+                                        <input type="radio" id="elevator-must" name="private-elevator" value="must">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="central-ac">Are you looking for a home with central air conditioning?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="ac-must">Must</label>
+                                        <input type="radio" id="ac-must" name="central-ac" value="must">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="ac-own">Can do on our own</label>
+                                        <input type="radio" id="ac-own" name="central-ac" value="own">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="num-balconies">No. of balconies you would like to have.</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="1-balcony">1 - 2 minimum</label>
+                                        <input type="radio" id="1-balcony" name="num-balconies" value="1-2">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="max-balconies">Maximum the best</label>
+                                        <input type="radio" id="max-balconies" name="num-balconies" value="max">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="parking-slots">What are the min. no. of parking slots required?</label>
+                                <input type="number" id="parking-slots" name="parking-slots" min="0" class="text-box-num">
+                            </div>
+                        </li>
+                        
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="mechanical-parking">Are you comfortable with mechanical parking?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="mechanical-yes-valet">Yes if valet is available</label>
+                                        <input type="radio" id="mechanical-yes-valet" name="mechanical-parking" value="yes-valet">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="mechanical-yes">Yes, I don't mind</label>
+                                        <input type="radio" id="mechanical-yes" name="mechanical-parking" value="yes">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="mechanical-no">No</label>
+                                        <input type="radio" id="mechanical-no" name="mechanical-parking" value="no">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+    
                 </section>
 
+
+
+
+                <section id="building-preferences">
+                    <h2>Building Preferences</h2>
+                    <ol class="question-list">
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="property-age">What should be the age of property that you are looking for?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="age-12-36">12 to 36 months old</label>
+                                        <input type="radio" id="age-12-36" name="property-age" value="12-36">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="age-0-12">0 to 12 months old</label>
+                                        <input type="radio" id="age-0-12" name="property-age" value="0-12">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="age-upcoming-6-12">Upcoming 6 - 12 months</label>
+                                        <input type="radio" id="age-upcoming-6-12" name="property-age" value="upcoming-6-12">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="age-upcoming-12-36">Upcoming 12 to 36 months</label>
+                                        <input type="radio" id="age-upcoming-12-36" name="property-age" value="upcoming-12-36">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="open-space">Are you looking for societies with more open space?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="open-30-40">30% to 40% open</label>
+                                        <input type="radio" id="open-30-40" name="open-space" value="30-40">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="open-41-60">41 to 60% open</label>
+                                        <input type="radio" id="open-41-60" name="open-space" value="41-60">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="open-61-70">61 to 70% open</label>
+                                        <input type="radio" id="open-61-70" name="open-space" value="61-70">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="society-type">What type of society do you prefer?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="small-low-rise">Small low rise (40 to 60 units)</label>
+                                        <input type="radio" id="small-low-rise" name="society-type" value="small-low-rise">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="single-block-high-end">Single block high end (70 - 100 units)</label>
+                                        <input type="radio" id="single-block-high-end" name="society-type" value="single-block-high-end">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="mid-sized-gated">Mid sized gated community (120 to 300 units)</label>
+                                        <input type="radio" id="mid-sized-gated" name="society-type" value="mid-sized-gated">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="large-gated">Large gated community (350 to 800 units)</label>
+                                        <input type="radio" id="large-gated" name="society-type" value="large-gated">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="township">Township</label>
+                                        <input type="radio" id="township" name="society-type" value="township">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="must-have-amenities">What are the 5 must-have amenities?</label>
+                                <div class="checkbox-group">
+                                    <!-- Add checkboxes for the list of amenities -->
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+
+
+
+                
+                <section id="finance-timeline">
+                    <h2>Finance and Timeline</h2>
+                    <ol class="question-list">
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="budget-range">What is your budget range for a house excluding interior cost?</label>
+                                <div class="input-group">
+                                    <label for="budget-min">Min.</label>
+                                    <input type="number" id="budget-min" name="budget-range-min" min="0" class="text-box-num"> Cr*
+                                </div>
+                                <div class="input-group">
+                                    <label for="budget-max">Max.</label>
+                                    <input type="number" id="budget-max" name="budget-range-max" min="0" class="text-box-num"> Cr*
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="down-payment">How much down payment will you be able to make in %?</label>
+                                <input type="number" id="down-payment" name="down-payment" min="0" max="100" class="text-box-num"> %
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="home-loan">Are you going to avail a home loan for this deal? What is the approved amount?</label>
+                                <input type="number" id="home-loan" name="home-loan" min="0" class="text-box-num"> Rs
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="property-sale-dependent">Is this purchase dependent on the sale of another property you own?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="sale-no">No</label>
+                                        <input type="radio" id="sale-no" name="property-sale-dependent" value="no">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="sale-maybe">Maybe</label>
+                                        <input type="radio" id="sale-maybe" name="property-sale-dependent" value="maybe">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="sale-yes">Yes</label>
+                                        <input type="radio" id="sale-yes" name="property-sale-dependent" value="yes">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="house-search-duration">Since how long are you looking for a house?</label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox">
+                                        <label for="just-started">Just started</label>
+                                        <input type="radio" id="just-started" name="house-search-duration" value="just-started">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="6-12-months">6 - 12 months</label>
+                                        <input type="radio" id="6-12-months" name="house-search-duration" value="6-12-months">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="12-24-months">12 to 24 months</label>
+                                        <input type="radio" id="12-24-months" name="house-search-duration" value="12-24-months">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="deal-timeline">In how much time do you want to seal the deal?</label>
+                                <input type="number" id="deal-timeline" name="deal-timeline" min="0" class="text-box-num"> days
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="other-preferences">Are there any other specific needs or preferences that we have not covered?</label>
+                                <textarea id="other-preferences" name="other-preferences" rows="4" class="text-box"></textarea>
+                            </div>
+                        </li>
+                        <li class="question-item">
+                            <div class="question-content">
+                                <label for="deal-breakers">Do you have any concerns or deal breakers that we should be aware of?</label>
+                                <textarea id="deal-breakers" name="deal-breakers" rows="4" class="text-box"></textarea>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
 
                 <div class="form-actions">
                     <button type="submit">Submit</button>
